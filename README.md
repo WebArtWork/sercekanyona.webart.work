@@ -17,3 +17,6 @@ Live site: https://sercekanyona.webart.work
 
 ## Notes
 The page states several details are not yet confirmed: room counts, categories, capacity, beds, bathrooms, area, Wi-Fi, TV, A/C, kitchen and prices; whether parking is free, its capacity, and public/private status; and mangal details such as location, whether it is shared, booking requirements, and available equipment. Email, a separate website, and Instagram are also listed as not confirmed.
+
+## Forms
+Connected to HotelOS (`hotelId` kp-sercekanyona): `stay-request` (no room-type select, categories are unverified; mangal questions go in the message). Phone is the only required field.
