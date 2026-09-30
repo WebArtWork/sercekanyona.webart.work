@@ -95,7 +95,7 @@
       <div class="hero-top"><h1 id="hero-title"><span>Серце</span><span>Каньйона</span></h1><div class="hero-side"><p>Номери з парковкою та мангалом у Кам’янці-Подільському.</p><div class="actions"><a class="btn ghost" href="tel:+380677949898">Зателефонувати</a></div></div></div>
       <div class="ridge"><div class="frame"><video id="heroVideo" muted loop playsinline preload="metadata" poster="images/hero.jpg" aria-hidden="true"><source src="hero-bg.mp4" type="video/mp4"></video></div><address class="addr-card"><b>вул. Підзамецький узвіз, 11</b><span>Кам’янець-Подільський</span></address></div>
       <dl class="strata"><div><dt>Проживання</dt><dd>У межах міста</dd></div><div><dt>Парковка</dt><dd>Для гостей з авто</dd></div><div><dt>Мангал</dt><dd>Вечеря на вогні</dd></div></dl>
-      <form class="book" data-hotelos data-form-name="Запит на проживання" novalidate><p class="book-title">Перевірити вільні дати</p><div class="book-fields"><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date" aria-describedby="stay-checkout-error"><span id="stay-checkout-error" data-error-for="checkOut"></span></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field phone-f">Телефон<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="stay-phone-error"><span id="stay-phone-error" data-error-for="phone"></span></label><button class="btn" type="submit">Надіслати запит</button></div><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><p class="book-note">Обов’язковий лише телефон — передзвонимо й підтвердимо вільні дати та вартість.</p><p data-status role="status" aria-live="polite"></p></form>
+      <form class="book" data-hotelos data-form-name="Запит на проживання" novalidate><p class="book-title">Перевірити вільні дати</p><div class="book-fields"><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date" aria-describedby="stay-checkout-error"><span id="stay-checkout-error" data-error-for="checkOut"></span></label><label class="field">Гостей<input name="guests" type="number" min="1" max="300" inputmode="numeric"></label><label class="field phone-f">Телефон<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="stay-phone-error"><span id="stay-phone-error" data-error-for="phone"></span></label><button class="btn" type="submit">Надіслати запит</button></div><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><p class="book-note">Обов’язковий лише телефон — передзвонимо й підтвердимо вільні дати та вартість.</p><p data-status role="status" aria-live="polite"></p></form>
     </div></section>
 
     <section class="section stay" id="stay"><div class="wrap">
@@ -240,7 +240,7 @@ function setup(form) {
 			if (value) lead[name] = value;
 		}
 		const guests = parseInt(field('guests')?.value, 10);
-		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (guests >= 1 && guests <= 300) lead.guests = guests;
 		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
 
 		submit.disabled = true;
